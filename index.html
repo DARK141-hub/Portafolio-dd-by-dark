@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre - Desarrollo Web a tu Alcance</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb; /* Fondo gris muy claro */
+            color: #1f2937; /* Texto gris oscuro */
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .slide-up {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .slide-up.appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative bg-gradient-to-r from-blue-50 to-white py-20 md:py-32 flex items-center justify-center min-h-screen-75 fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-blue-900 mb-4 leading-tight">
+                Design and Digitial Services by DARK
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-700 mb-8">
+                Web Express en 24 Horas o menos. ¡Tu sitio web listo para impresionar!
+            </p>
+            <a href="#featured-templates" class="inline-block bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 ease-in-out transform hover:scale-105">
+                Ver demos
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Templates Section -->
+    <section id="featured-templates" class="py-16 md:py-24 bg-gray-50 fade-in">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+                Plantillas Principales
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Template Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 slide-up">
+                    <img src="sources/gallery/plan-cero.png" alt="Miniatura de la plantilla 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">Plan Cero - Demo</h3>
+                        <p class="text-gray-600 mb-4">Diseño simple pero eficaz para tener tu primera presencia web.</p>
+                        <a href="https://dark141-hub.github.io/plan-cero-cafeteria/" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                            Ver demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Template Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 slide-up">
+                    <img src="sources/gallery/plan-estandar.png" alt="Miniatura de la plantilla 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">Plan 1 - Estandar</h3>
+                        <p class="text-gray-600 mb-4">Da ese paso a la web con una pagina simple pero personalizada.</p>
+                        <a href="https://dark141-hub.github.io/plan-estandar-cafeteria/" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                            Ver demo
+                        </a>
+                    </div>
+                </div>
+                <!-- Template Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-300 hover:scale-105 slide-up">
+                    <img src="https://placehold.co/600x400/e0f2f7/263238?text=Demo+3" alt="Miniatura de la plantilla 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">Plan 2 - Profesional</h3>
+                        <p class="text-gray-600 mb-4">Sitio web con personalizacion y diseño adecuados para cualquier negocio, una web completa y profesional.</p>
+                        <a href="#" class="block text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg transition duration-300">
+                            Ver demo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 md:py-24 bg-white fade-in">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+                Nuestros Servicios
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Free Demo Card -->
+                <div class="bg-blue-50 p-8 rounded-xl shadow-lg border border-blue-200 transform transition duration-300 hover:scale-105 slide-up">
+                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Demo Gratuita</h3>
+                    <p class="text-gray-700 mb-6">
+                        Ideal para explorar nuestras capacidades. Te ofrecemos una demostración interactiva de cómo podría lucir tu proyecto, utilizando una de nuestras plantillas base. Incluye:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                        <li>Página de muestra con diseño atractivo y adaptable a celular</li>
+                        <li>Información genérica editable</li>
+                        <li>100% funcional y ligera</li>
+                        <li>Hospedada gratis en línea para que la veas y compartas.</li>
+                        <li>Perfecto para emprendedores curiosos o negocios que apenas empiezan.</li>
+                    </ul>
+                    <p class="text-gray-700 font-semibold">
+                        Perfecto para visualizar el potencial antes de comprometerte.
+                    </p>
+                    <p class="text-blue-700 font-bold mt-5 text-center text-3xl">
+                        GRATIS
+                    </p>
+                </div>
+                <!-- Standard Plan Card -->
+                <div class="bg-green-50 p-8 rounded-xl shadow-lg border border-green-200 transform transition duration-300 hover:scale-105 slide-up">
+                    <h3 class="text-2xl font-bold text-green-800 mb-4">Plan Estándar</h3>
+                    <p class="text-gray-700 mb-6">
+                        La solución completa para lanzar tu presencia online. Este plan te brinda un sitio web totalmente funcional y personalizado. Incluye:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                        <li>Diseño profesional con tu marca, imágenes y datos reales.</li>
+                        <li>Página completamente funcional y optimizada para celular.</li>
+                        <li>Enlace a redes sociales, ubicación y contacto por WhatsApp.</li>
+                        <li>Optimización básica para SEO.</li>
+                        <li>Edición visual y responsive para cualquier tipo de negocio.</li>
+                        <li>Soporte técnico inicial.</li>
+                    </ul>
+                    <p class="text-gray-700 font-semibold">
+                        Tu sitio web listo para impresionar y crecer con tu negocio.
+                    </p>
+                    <p class="text-green-700 font-bold mt-5 text-center text-3xl">
+                        Costo: $500 MXN
+                    </p>
+                </div>
+                <!-- Professional Plan Card -->
+                <div class="bg-yellow-50 p-8 rounded-xl shadow-lg border border-yellow-200 transform transition duration-300 hover:scale-105 slide-up">
+                    <h3 class="text-2xl font-bold text-yellow-800 mb-4">Plan Profesional</h3>
+                    <p class="text-gray-700 mb-6">
+                        Para negocios que buscan una presencia web robusta y profesional. Este plan incluye todo lo del Plan Estándar, más:
+                    </p>
+                    <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                        <li>Diseño a medida con animaciones, secciones personalizadas y branding completo.</li>
+                        <li>Integración de formularios de contacto personalizados.</li>
+                        <li>
+                            Secciones como galería, formulario de contacto, testimonios, blog o catálogo de productos.
+                        </li>
+                        <li>
+                            Soporte y mantenimiento opcional para asegurar que tu sitio esté siempre actualizado y funcionando al máximo.
+                        </li>
+                        <li>Optimización avanzada para SEO y velocidad.</li>
+                        <li>Soporte técnico extendido y mantenimiento mensual opcional.</li>
+                        <li>Capacitación básica para la gestión del sitio.</li>
+                    </ul>
+                    <p class="text-gray-700 font-semibold">
+                        Ideal para empresas que necesitan un sitio web completo y profesional.
+                    </p>
+                    <p class="text-yellow-700 font-bold mt-5 text-center text-3xl">
+                        Costo: $2500 MXN
+                    </p>
+            </div>
+            <!-- Sitio Premium -->
+            <div class="bg-purple-50 p-8 rounded-xl shadow-lg border border-purple-200 transform transition duration-300 hover:scale-105 slide-up">
+                <h3 class="text-2xl font-bold text-purple-800 mb-4">Sitio Premium</h3>
+                <p class="text-gray-700 mb-6">
+                     Ideal para: Marcas consolidadas, influencers, organizadores de eventos, creadores de contenido o empresas que quieren escalar.. Este plan incluye todo lo del Plan Profesional, más:
+                </p>
+                <ul class="list-disc list-inside text-gray-600 space-y-2 mb-6">
+                    <li>Diseño exclusivo con branding completo.</li>
+                    <li>Dominio propio (.com, .mx o el que elijas) + hosting profesional por 1 año.</li>
+                    <li>Soporte técnico prioritario y mantenimiento mensual incluido.</li>
+                    <li>Sitio 100% responsive y optimizado para SEO</li>
+                    <li>Optimización completa para SEO y rendimiento.</li>
+                    <li>Catálogo o tienda online básica (sin pasarela de pago si no lo requieres)</li>
+                    <li>Formulario avanzado + conexión a WhatsApp o correo</li>
+                    <li>Optimización de carga, imágenes y velocidad</li>
+                    <li>Seguridad básica (SSL, anti-spam)</li>
+                    <li>Diseño de 3 banners incluidos</li>
+                    <li>Soporte técnico y 3 meses de mantenimiento incluido</li>
+                </ul>
+                <p class="text-gray-700 font-semibold">
+                    Tu sitio web será una herramienta poderosa para tu negocio.
+                </p>
+                <p class="text-purple-700 font-bold mt-5 text-center text-3xl">
+                    Costo: Desde $12000 MXN
+                </p>
+        </div>
+    </section>
+
+    <!-- Clientes con los que hemos trabajado -->
+    <section id="clients" class="py-16 md:py-24 bg-gray-50 fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+                Clientes con los que hemos trabajado
+            </h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Cliente 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col w-full md:w-80">
+                    <img src="sources/gallery/calavera.png" alt="Sitio Cliente 1" class="w-full h-80 object-cover">
+                    <div class="p-4 flex-1 flex flex-col">
+                        <h3 class="text-lg font-semibold text-blue-800 mb-2">Calavera Tornasol Shop</h3>
+                        <p class="text-gray-600 mb-4 flex-1">Tienda en linea para una influencer dedicada a la venta de peluches.</p>
+                    </div>
+                </div>
+                <!-- Cliente 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col w-full md:w-80">
+                    <img src="sources/gallery/power.png" alt="Sitio Cliente 2" class="w-full h-80 object-cover">
+                    <div class="p-4 flex-1 flex flex-col">
+                        <h3 class="text-lg font-semibold text-blue-800 mb-2">Power Legion Enterprise</h3>
+                        <p class="text-gray-600 mb-4 flex-1">Pagina de catalogo con variedad de secciones para empresa americana.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-white fade-in">
+            <div class="container mx-auto px-6"></div>
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
+                Contáctanos
+            </h2>
+            <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-xl shadow-lg slide-up">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
+                        <input type="text" id="name" name="name" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Tu Nombre" required>
+                    </div>
+                    <div>
+                        <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="tu.correo@ejemplo.com" required>
+                    </div>
+                    <div>
+                        <label for="business" class="block text-gray-700 text-sm font-bold mb-2">Nombre de tu Negocio (Opcional):</label>
+                        <input type="text" id="business" name="business" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Tu Empresa S.A.">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Mensaje:</label>
+                        <textarea id="message" name="message" rows="5" class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-green-500" placeholder="Me gustaría saber más sobre..." required></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105">
+                        Enviar mensaje por WhatsApp
+                    </button>
+                    <div id="whatsappMessage" class="hidden mt-4 p-3 bg-blue-100 text-blue-800 rounded-lg text-sm">
+                        Haz clic en el botón de arriba para enviar el mensaje por WhatsApp.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-10 fade-in">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-6">&copy; 2025 Tu Nombre. Todos los derechos reservados.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+                <a href="#" class="text-gray-300 hover:text-white transition duration-300">
+                    <i class="fab fa-twitter fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script>
+                // JavaScript for WhatsApp Form
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const business = document.getElementById('business').value;
+            const message = document.getElementById('message').value;
+
+            // Construct the WhatsApp message
+            let whatsappMessage = `Hola, mi nombre es ${name}.`;
+            if (business) {
+                whatsappMessage += ` Soy de ${business}.`;
+            }
+            whatsappMessage += ` Mi correo es ${email}.`;
+            whatsappMessage += `\n\nMensaje: ${message}`;
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // WhatsApp API URL (replace 'YOUR_PHONE_NUMBER' with your actual phone number including country code, e.g., '521234567890')
+            // For Mexico, it usually starts with 52, then 1, then the 10-digit number.
+            const whatsappURL = `https://wa.me/528683739341?text=${encodedMessage}`;
+
+            // Open WhatsApp in a new tab
+            window.open(whatsappURL, '_blank');
+
+            // Show a confirmation message (optional)
+            const whatsappMessageDiv = document.getElementById('whatsappMessage');
+            whatsappMessageDiv.classList.remove('hidden');
+            whatsappMessageDiv.textContent = '¡Gracias! Se abrirá WhatsApp con tu mensaje precargado. Por favor, envíalo.';
+
+            // Clear the form after submission
+            this.reset();
+        });
+
+// JavaScript for Contact Form Submission
+        // JavaScript for Scroll Animations (Fade-in and Slide-up)
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the element is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('appear');
+                        observer.unobserve(entry.target); // Stop observing once it's appeared
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all elements with fade-in or slide-up classes
+            document.querySelectorAll('.fade-in, .slide-up').forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
