@@ -183,7 +183,7 @@
                     <li>Soporte técnico prioritario y mantenimiento mensual incluido.</li>
                     <li>Sitio 100% responsive y optimizado para SEO</li>
                     <li>Optimización completa para SEO y rendimiento.</li>
-                    <li>Catálogo o tienda online básica (sin pasarela de pago si no lo requieres)</li>
+                    <li>Catálogo o tienda online básica (los pagos se manejan por sistema de transferencia)</li>
                     <li>Formulario avanzado + conexión a WhatsApp o correo</li>
                     <li>Optimización de carga, imágenes y velocidad</li>
                     <li>Seguridad básica (SSL, anti-spam)</li>
@@ -194,7 +194,7 @@
                     Tu sitio web será una herramienta poderosa para tu negocio.
                 </p>
                 <p class="text-purple-700 font-bold mt-5 text-center text-3xl">
-                    Costo: Desde $12000 MXN
+                    Negociable Desde $5000 MXN
                 </p>
         </div>
     </section>
@@ -232,7 +232,7 @@
         </div>
 
         <!-- Contact Section -->
-        <section id="contact" class="py-16 md:py-24 bg-white fade-in mt-10">
+        <section id="contact" class="py-16 md:py-24 bg-white fade-in mt-10 mb-20">
             <div class="container mx-auto px-6"></div>
             <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-900 mb-12">
                 Contáctanos
@@ -327,10 +327,48 @@
                 observer.observe(element);
             });
         });
+
+        // Promociones dinámicas en los paquetes
+        document.addEventListener('DOMContentLoaded', () => {
+            // Array de promociones: id del plan, precio original, precio promocional
+            const promociones = [
+                {
+                    selector: '.bg-green-50 .text-green-700', // Plan Estándar
+                    original: '$500 MXN',
+                    oferta: '$400 MXN'
+                },
+                {
+                    selector: '.bg-yellow-50 .text-yellow-700', // Plan Profesional
+                    original: '$2500 MXN',
+                    oferta: '$2200 MXN'
+                }
+                // Puedes agregar más promociones aquí
+            ];
+
+            promociones.forEach(promo => {
+                const precioElem = document.querySelector(promo.selector);
+                if (precioElem) {
+                    // Crear línea tachada para el precio original
+                    const originalElem = document.createElement('span');
+                    originalElem.textContent = promo.original;
+                    originalElem.className = 'block text-lg text-gray-500 line-through mb-1';
+
+                    // Crear elemento para el precio de oferta
+                    const ofertaElem = document.createElement('span');
+                    ofertaElem.textContent = `Oferta: ${promo.oferta}`;
+                    ofertaElem.className = 'block text-2xl font-bold';
+
+                    // Limpiar el contenido actual y agregar ambos precios
+                    precioElem.textContent = '';
+                    precioElem.appendChild(originalElem);
+                    precioElem.appendChild(ofertaElem);
+                }
+            });
+        });
     </script>
 
         <!-- Footer -->
-    <footer class="bg-blue-900 text-white py-10">
+    <footer class="bg-blue-900 text-white py-10 fixed bottom-0 left-0 w-full z-50">
         <div class="container mx-auto px-3 text-center">
             <p class="mb-6">&copy; 2025 Design and Digital Services by DARK. <br>
                  Todos los derechos reservados.</p>
