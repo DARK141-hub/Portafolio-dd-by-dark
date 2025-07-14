@@ -327,44 +327,6 @@
                 observer.observe(element);
             });
         });
-
-        // Promociones dinámicas en los paquetes
-        document.addEventListener('DOMContentLoaded', () => {
-            // Array de promociones: id del plan, precio original, precio promocional
-            const promociones = [
-                {
-                    selector: '.bg-green-50 .text-green-700', // Plan Estándar
-                    original: '$500 MXN',
-                    oferta: '$400 MXN'
-                },
-                {
-                    selector: '.bg-yellow-50 .text-yellow-700', // Plan Profesional
-                    original: '$2500 MXN',
-                    oferta: '$2200 MXN'
-                }
-                // Puedes agregar más promociones aquí
-            ];
-
-            promociones.forEach(promo => {
-                const precioElem = document.querySelector(promo.selector);
-                if (precioElem) {
-                    // Crear línea tachada para el precio original
-                    const originalElem = document.createElement('span');
-                    originalElem.textContent = promo.original;
-                    originalElem.className = 'block text-lg text-gray-500 line-through mb-1';
-
-                    // Crear elemento para el precio de oferta
-                    const ofertaElem = document.createElement('span');
-                    ofertaElem.textContent = `Oferta: ${promo.oferta}`;
-                    ofertaElem.className = 'block text-2xl font-bold';
-
-                    // Limpiar el contenido actual y agregar ambos precios
-                    precioElem.textContent = '';
-                    precioElem.appendChild(originalElem);
-                    precioElem.appendChild(ofertaElem);
-                }
-            });
-        });
     </script>
 
         <!-- Footer -->
